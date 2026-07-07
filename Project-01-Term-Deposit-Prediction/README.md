@@ -463,23 +463,59 @@ The explainability analysis included:
 <img src="outputs/figures/14_shap_feature_importance.png" width="650">
 </p>
 
-The SHAP feature importance plot identifies the variables that have the greatest overall influence on the Random Forest model.
+The SHAP Feature Importance plot illustrates the overall contribution of each feature to the Random Forest model. Features with higher mean absolute SHAP values have a greater influence on the model's predictions.
 
-Among all features, **duration** was the most influential predictor, followed by **contact_unknown**, **poutcome_success**, **housing**, **day**, **age**, **month_oct**, **month_jun**, and **previous**.
+The analysis identified **duration** as the most influential feature, followed by **contact_unknown**, **poutcome_success**, **housing**, **day**, **age**, **month_oct**, **month_jun**, and **previous**. These variables play the most significant role in determining whether a customer subscribes to a term deposit.
 
 ---
 
-## SHAP Waterfall Plot (Sample Prediction)
+## SHAP Waterfall Plot – Prediction 1
+
+<p align="center">
+<img src="outputs/figures/15_shap_prediction_1.png" width="700">
+</p>
+
+This waterfall plot explains how individual feature contributions influenced the first customer's prediction. Features shown in blue decreased the prediction score, while red features increased it.
+
+---
+
+## SHAP Waterfall Plot – Prediction 2
+
+<p align="center">
+<img src="outputs/figures/16_shap_prediction_2.png" width="700">
+</p>
+
+This visualization explains the second customer prediction by showing how each feature moved the prediction from the baseline value to the final prediction.
+
+---
+
+## SHAP Waterfall Plot – Prediction 3
+
+<p align="center">
+<img src="outputs/figures/17_shap_prediction_3.png" width="700">
+</p>
+
+The third prediction demonstrates that multiple features jointly influenced the model decision, with both positive and negative SHAP contributions affecting the final output.
+
+---
+
+## SHAP Waterfall Plot – Prediction 4
+
+<p align="center">
+<img src="outputs/figures/18_shap_prediction_4.png" width="700">
+</p>
+
+This waterfall plot illustrates another customer prediction where several features reduced the prediction score while a few features increased it, resulting in the model's final decision.
+
+---
+
+## SHAP Waterfall Plot – Prediction 5 (8th Test Sample)
 
 <p align="center">
 <img src="outputs/figures/19_shap_prediction_5.png" width="700">
 </p>
 
-The waterfall plot explains how different customer attributes contributed to an individual prediction.
-
-Starting from the model's baseline prediction, each feature either increases or decreases the prediction score until the final prediction is reached.
-
-This visualization provides a clear explanation of why the Random Forest model predicted whether the customer would subscribe to the term deposit.
+Unlike the previous examples, this customer was predicted with a high probability of subscribing to the term deposit. Positive contributions from **poutcome_success**, **duration**, **age**, **pdays**, **month_jun**, and other features collectively increased the prediction score to a high final value.
 
 ---
 
@@ -548,7 +584,7 @@ Possible improvements for future versions of this project include:
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/huzaifawaheed2/DevelopersHub-Corporation-Internship.git
+git clone https://github.com/huzaifawaheed2/DevelopersHub-Corporation-Advanced-Internship.git
 ```
 
 ---
@@ -556,7 +592,7 @@ git clone https://github.com/huzaifawaheed2/DevelopersHub-Corporation-Internship
 ## 2. Navigate to the Project Folder
 
 ```bash
-cd DevelopersHub-Corporation-Internship/Project-01-Term-Deposit-Prediction
+cd DevelopersHub-Corporation-Advanced-Internship/Project-01-Term-Deposit-Prediction
 ```
 
 ---

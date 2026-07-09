@@ -5,19 +5,24 @@
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green)
 ![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange)
+![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Visualization-9cf)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-red)
 ![SHAP](https://img.shields.io/badge/SHAP-Explainable%20AI-purple)
 ![Data Science](https://img.shields.io/badge/Data%20Science-Analytics-green)
+![Classification](https://img.shields.io/badge/Classification-Supervised%20Learning-blueviolet)
+![K-Means](https://img.shields.io/badge/K--Means-Clustering-success)
+![PCA](https://img.shields.io/badge/PCA-Dimensionality%20Reduction-purple)
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)
 
 ---
 
-## Repository Overview
+# Repository Overview
 
 This repository contains the projects completed during my **DevelopersHub Corporation Data Science & Analytics Internship**.
 
-Each project demonstrates practical applications of data preprocessing, exploratory data analysis (EDA), machine learning, model evaluation, data visualization, and Explainable Artificial Intelligence (XAI) using real-world datasets.
+Each project demonstrates practical applications of **data preprocessing, exploratory data analysis (EDA), supervised learning, unsupervised learning, model evaluation, data visualization, dimensionality reduction, and Explainable Artificial Intelligence (XAI)** using real-world datasets.
 
-Every project is organized in its own folder with complete documentation, source code, visualizations, and project-specific README files.
+Every project is organized in its own folder with complete documentation, source code, visualizations, project-specific README files, and required dependencies.
 
 ---
 
@@ -27,6 +32,8 @@ Every project is organized in its own folder with complete documentation, source
 DevelopersHub-Corporation-Advanced-Internship/
 │
 ├── Project-01-Term-Deposit-Prediction/
+│
+├── Project-02-Customer-Segmentation/
 │
 ├── README.md
 └── .gitignore
@@ -39,10 +46,11 @@ DevelopersHub-Corporation-Advanced-Internship/
 | Project | Description | Status |
 |---------|-------------|--------|
 | Project-01 | Term Deposit Subscription Prediction Using Machine Learning | ✅ Completed |
+| Project-02 | Customer Segmentation Using Unsupervised Learning | ✅ Completed |
 
 ---
 
-# Project 01
+# Project-01
 
 ## Term Deposit Subscription Prediction Using Machine Learning
 
@@ -70,7 +78,7 @@ Develop a machine learning classification model to predict whether a bank custom
 - Pandas
 - NumPy
 - Matplotlib
-- Scikit-Learn
+- Scikit-learn
 - SHAP
 - Jupyter Notebook
 
@@ -82,24 +90,70 @@ Project-01-Term-Deposit-Prediction/
 
 ---
 
+# Project-02
+
+## Customer Segmentation Using Unsupervised Learning
+
+### Objective
+
+Segment mall customers into meaningful groups based on their purchasing behavior using the **K-Means Clustering** algorithm and recommend marketing strategies for each identified customer segment.
+
+### Project Highlights
+
+- Data Quality Assessment
+- Exploratory Data Analysis (EDA)
+- Feature Selection
+- Feature Scaling
+- K-Means Clustering
+- Elbow Method
+- Principal Component Analysis (PCA)
+- Customer Segmentation
+- Cluster Analysis
+- Marketing Strategy Development
+
+### Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Jupyter Notebook
+
+### Project Folder
+
+```text
+Project-02-Customer-Segmentation/
+```
+
+---
+
 # Skills Demonstrated
 
 Throughout this internship repository, the following technical skills have been applied:
 
 - Data Cleaning
+- Data Quality Assessment
 - Data Preprocessing
 - Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Feature Encoding
 - Data Visualization
-- Machine Learning
+- Feature Engineering
+- Feature Selection
+- Feature Scaling
+- Supervised Machine Learning
+- Unsupervised Machine Learning
 - Binary Classification
+- K-Means Clustering
+- Principal Component Analysis (PCA)
 - Logistic Regression
 - Random Forest
 - Model Evaluation
 - Confusion Matrix
 - ROC Curve Analysis
 - Explainable AI (SHAP)
+- Business Insight Generation
+- Marketing Strategy Development
 - Technical Documentation
 - Git & GitHub
 
@@ -107,26 +161,30 @@ Throughout this internship repository, the following technical skills have been 
 
 # Repository Purpose
 
-The primary objective of this repository is to document and showcase the practical projects completed during the DevelopersHub Corporation Data Science & Analytics Internship.
+The primary objective of this repository is to document and showcase the practical projects completed during the **DevelopersHub Corporation Data Science & Analytics Internship**.
 
-Each project follows a complete machine learning workflow, including:
+Each project follows a complete data science workflow, including:
 
 - Data Collection
 - Data Cleaning
+- Data Quality Assessment
+- Exploratory Data Analysis (EDA)
 - Feature Engineering
-- Exploratory Data Analysis
-- Model Development
+- Feature Selection
+- Feature Scaling
+- Machine Learning
 - Model Evaluation
-- Explainable AI
+- Customer Segmentation
+- Explainable AI (SHAP)
 - Business Insight Generation
 
-As additional internship projects are completed, they will be added to this repository with the same documentation and project structure.
+Additional internship projects will be added to this repository as they are completed.
 
 ---
 
 # How to Use
 
-## Clone the Repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/huzaifawaheed2/DevelopersHub-Corporation-Advanced-Internship.git
@@ -134,15 +192,23 @@ git clone https://github.com/huzaifawaheed2/DevelopersHub-Corporation-Advanced-I
 
 ---
 
-## Navigate to the Project Folder
+## 2. Navigate to a Project Folder
+
+### Project-01
 
 ```bash
 cd DevelopersHub-Corporation-Advanced-Internship/Project-01-Term-Deposit-Prediction
 ```
 
+### Project-02
+
+```bash
+cd DevelopersHub-Corporation-Advanced-Internship/Project-02-Customer-Segmentation
+```
+
 ---
 
-## Install Required Libraries
+## 3. Install Required Libraries
 
 ```bash
 pip install -r requirements.txt
@@ -150,7 +216,7 @@ pip install -r requirements.txt
 
 ---
 
-## Open Jupyter Notebook
+## 4. Open Jupyter Notebook
 
 ```bash
 jupyter notebook
@@ -158,10 +224,33 @@ jupyter notebook
 
 ---
 
-## Run the Project
+## 5. Run the Notebook
+
+### Project-01
 
 ```text
 notebooks/term_deposit_prediction.ipynb
+```
+
+### Project-02
+
+```text
+notebooks/Customer_Segmentation.ipynb
+```
+
+---
+
+# Repository Contents
+
+```text
+DevelopersHub-Corporation-Advanced-Internship/
+│
+├── Project-01-Term-Deposit-Prediction/
+│
+├── Project-02-Customer-Segmentation/
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
@@ -174,9 +263,17 @@ Data Analyst | Power BI Developer | QA Engineer
 
 ### Connect With Me
 
-* GitHub: [huzaifawaheed2](https://github.com/huzaifawaheed2)
-* LinkedIn: [Muhammad Huzaifa Waheed](https://www.linkedin.com/in/muhammad-huzaifa-waheed-70043338b)
+- GitHub: [huzaifawaheed2](https://github.com/huzaifawaheed2)
+- LinkedIn: [Muhammad Huzaifa Waheed](https://www.linkedin.com/in/muhammad-huzaifa-waheed-70043338b)
 
 ---
 
-⭐ If you found this repository useful, consider giving it a star.
+# Acknowledgements
+
+This repository contains projects completed as part of the **DevelopersHub Corporation Data Science & Analytics Internship Program**.
+
+The projects use publicly available datasets from trusted sources, including the **UCI Machine Learning Repository** and **Kaggle**, for educational and research purposes.
+
+---
+
+⭐ **If you found this repository useful, consider giving it a star!**

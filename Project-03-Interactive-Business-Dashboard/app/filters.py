@@ -5,19 +5,28 @@ def sidebar_filters(df):
     Create sidebar filters and return filtered dataframe.
     """
     
+    # Sidebar Title
     st.sidebar.header("Dashboard Filters")
     
     st.sidebar.divider()
     
-    # Date Range Filter
-    start_date = df["Order Date"].min()
-    end_date = df["Order Date"].max()
-    
-    date_range = st.sidebar.date_input(
-        "Order Date Range",
-        value=(start_date, end_date),
-        min_value=start_date,
-        max_value=end_date
+    # Start & End Date Filters
+
+    min_date = df["Order Date"].min().date()
+    max_date = df["Order Date"].max().date()
+
+    start_date = st.sidebar.date_input(
+        "Start Date",
+        value=min_date,
+        min_value=min_date,
+        max_value=max_date
+    )
+
+    end_date = st.sidebar.date_input(
+        "End Date",
+        value=max_date,
+        min_value=min_date,
+        max_value=max_date
     )
     
     st.sidebar.divider()
@@ -25,59 +34,64 @@ def sidebar_filters(df):
     # Year Filter
     year = st.sidebar.multiselect(
         "Select Year",
-        options=sorted(df["Order Year"].unique()),
-        default=sorted(df["Order Year"].unique())
+        options=sorted(df["Order Year"].unique())
     )
     
     # Market Filter
     market = st.sidebar.multiselect(
         "Select Market",
-        options=sorted(df["Market"].unique()),
-        default=sorted(df["Market"].unique())
+        options=sorted(df["Market"].unique())
     )
     
     # Region Filter
     region = st.sidebar.multiselect(
         "Select Region",
-        options=sorted(df["Region"].unique()),
-        default=sorted(df["Region"].unique())
+        options=sorted(df["Region"].unique())
     )
     
     # Category Filter
     category = st.sidebar.multiselect(
         "Select Category",
-        options=sorted(df["Category"].unique()),
-        default=sorted(df["Category"].unique())
+        options=sorted(df["Category"].unique())
     )
     
     # Segment Filter
     segment = st.sidebar.multiselect(
         "Select Segment",
-        options=sorted(df["Segment"].unique()),
-        default=sorted(df["Segment"].unique())
+        options=sorted(df["Segment"].unique())
     )
     
     # Apply Date Filter
     filtered_df = df.copy()
     
-    if len(date_range) == 2:
-        
-        start =date_range[0]
-        end = date_range[1]
+    if start_date and end_date:
         filtered_df = filtered_df[
-            (filtered_df["Order Date"].dt.date >= start) &
-            (filtered_df["Order Date"].dt.date <= end)
+            (filtered_df["Order Date"].dt.date >= start_date) &
+            (filtered_df["Order Date"].dt.date <= end_date)
         ]
     
-    # Apply Other Filters
-    filtered_df = df[
-        (df["Order Year"].isin(year)) &
-        (df["Market"].isin(market)) &
-        (df["Region"].isin(region)) &
-        (df["Category"].isin(category)) &
-        (df["Segment"].isin(segment))
-    ]
+    # Apply Year Filters
+    if year:
+        filtered_df = filtered_df[filtered_df["Order Year"].isin(year)]
     
+    # Apply Market Filter
+    if market:
+        filtered_df = filtered_df[filtered_df["Market"].isin(market)]
+    
+    # Apply Region Filter
+    if region:
+        filtered_df = filtered_df[filtered_df["Region"].isin(region)]
+    
+    # Apply Category Filter
+    if category:
+        filtered_df = filtered_df[filtered_df["Category"].isin(category)]
+    
+    # Apply Segment Filter
+    if segment:
+        filtered_df = filtered_df[filtered_df["Segment"].isin(segment)]
+
+
+
     # Sidebar Information
     st.sidebar.divider()
     

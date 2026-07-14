@@ -3,9 +3,9 @@ import streamlit as st
 
 def page_config():
     """
-    Configure the Streamlit Page.
+    Configure Streamlit page settings.
     """
-    
+
     st.set_page_config(
         page_title="Global Superstore Dashboard",
         page_icon="📊",

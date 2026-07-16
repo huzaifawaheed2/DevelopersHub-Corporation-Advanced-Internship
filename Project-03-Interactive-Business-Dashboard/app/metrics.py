@@ -6,10 +6,12 @@ from utils import (
     format_percentage
 )
 
-def metric_card(title, value, icon):
+def metric_card(title, value, icon, subtext=None):
     """
     Display a custom KPI card.
     """
+
+    subtext_html = f"<div class=\"metric-subtext\">{subtext}</div>" if subtext else ""
 
     st.markdown(
         f"""
@@ -17,6 +19,7 @@ def metric_card(title, value, icon):
             <div class="metric-icon">{icon}</div>
             <div class="metric-title">{title}</div>
             <div class="metric-value">{value}</div>
+            {subtext_html}
         </div>
         """,
         unsafe_allow_html=True
@@ -58,58 +61,39 @@ def show_metrics(df):
         else 0
     )
 
+    st.markdown("### Key Performance Indicators")
+    st.caption("A quick business snapshot of the currently filtered dataset.")
+
 
     # KPI Cards - Row 1
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        st.metric(
-            label="Total Sales",
-            value=format_currency(total_sales)
-        )
+        metric_card("Total Sales", format_currency(total_sales), "💰", "Revenue across the filtered records")
 
     with col2:
-        st.metric(
-            label="Total Profit",
-            value=format_currency(total_profit)
-        )
+        metric_card("Total Profit", format_currency(total_profit), "📈", "Net profit after costs")
 
     with col3:
-        st.metric(
-            label="Total Orders",
-            value=format_number(total_orders)
-        )
+        metric_card("Total Orders", format_number(total_orders), "🧾", "Unique orders placed")
 
     with col4:
-        st.metric(
-            label="Total Customers",
-            value=format_number(total_customers)
-        )
+        metric_card("Total Customers", format_number(total_customers), "👥", "Unique customers in view")
 
 
     # KPI Cards - Row 2
     col5, col6, col7, col8 = st.columns(4)
 
     with col5:
-        st.metric(
-            label="Profit Margin",
-            value=format_percentage(profit_margin)
-        )
+        metric_card("Profit Margin", format_percentage(profit_margin), "🎯", "Profit as a share of sales")
 
     with col6:
-        st.metric(
-            label="Avg. Order Value",
-            value=format_currency(average_order_value)
-        )
+        metric_card("Avg. Order Value", format_currency(average_order_value), "🛒", "Average sales per order")
 
     with col7:
-        st.metric(
-            label="Avg. Profit / Order",
-            value=format_currency(average_profit_per_order)
-        )
+        metric_card("Avg. Profit / Order", format_currency(average_profit_per_order), "✨", "Average contribution per order")
 
     with col8:
-        st.metric(
-            label="Avg. Sales / Customer",
-            value=format_currency(average_sales_per_customer)
-        )
+        metric_card("Avg. Sales / Customer", format_currency(average_sales_per_customer), "📊", "Revenue generated per customer")
+
+    st.markdown("<div class='kpi-bottom-spacer'></div>", unsafe_allow_html=True)

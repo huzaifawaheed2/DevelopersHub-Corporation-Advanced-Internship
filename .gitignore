@@ -4,3 +4,6 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# App Folder Exclude
+Project-03-Interactive-Business-Dashboard/app_exclude/

@@ -2,6 +2,15 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 
+BRAND_COLORWAY = [
+    "#1D4ED8",
+    "#0F172A",
+    "#F59E0B",
+    "#E11D48",
+    "#7C3AED",
+    "#475569"
+]
+
 
 # Common Chart Layout
 def apply_chart_layout(
@@ -20,9 +29,19 @@ def apply_chart_layout(
         title_x=0.5,
         xaxis_title=x_title,
         yaxis_title=y_title,
-        template="plotly_white",
-        height=height
+        template="simple_white",
+        height=height,
+        colorway=BRAND_COLORWAY,
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(248,250,252,0.95)",
+        margin=dict(l=20, r=20, t=70, b=20),
+        font=dict(family="Arial, sans-serif", color="#0F172A"),
+        title_font=dict(size=18, color="#0F172A"),
+        hoverlabel=dict(bgcolor="white", font_size=13, font_family="Arial, sans-serif")
     )
+
+    fig.update_xaxes(showgrid=False, zeroline=False, linecolor="rgba(15, 23, 42, 0.12)")
+    fig.update_yaxes(showgrid=True, gridcolor="rgba(148, 163, 184, 0.18)", zeroline=False)
 
 
 # Display Plotly Chart
@@ -45,6 +64,10 @@ def display_chart(fig):
         }
     )
     
+    
+
+
+    
 
 def sales_by_category_chart(df):
     """
@@ -63,7 +86,8 @@ def sales_by_category_chart(df):
         category_sales,
         x="Category",
         y="Sales",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -100,7 +124,8 @@ def profit_by_category_chart(df):
         category_profit,
         x="Category",
         y="Profit",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -137,7 +162,8 @@ def sales_by_region_chart(df):
         region_sales,
         x="Region",
         y="Sales",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -174,7 +200,8 @@ def sales_by_segment_chart(df):
         segment_sales,
         x="Segment",
         y="Sales",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -215,7 +242,9 @@ def monthly_sales_trend_chart(df):
         x="Order Month Name",
         y="Sales",
         color="Order Year",
-        markers=True
+        markers=True,
+        line_shape="spline",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -258,7 +287,8 @@ def top_products_chart(df):
         top_products,
         x="Sales",
         y="Product Name",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -298,7 +328,8 @@ def top_customers_chart(df):
         top_customers,
         x="Sales",
         y="Customer Name",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -333,9 +364,9 @@ def profit_vs_sales_chart(df):
         color="Profit Status",
         opacity=0.75,
         color_discrete_map={
-            "Profit": "green",
-            "Loss": "red",
-            "Break-even": "gold"
+            "Profit": "#1D4ED8",
+            "Loss": "#E11D48",
+            "Break-even": "#F59E0B"
         },
         hover_data={
             "Category": True,
@@ -389,7 +420,8 @@ def sales_by_ship_mode_chart(df):
         ship_mode_sales,
         x="Ship Mode",
         y="Sales",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -426,7 +458,8 @@ def sales_by_market_chart(df):
         market_sales,
         x="Market",
         y="Sales",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -465,7 +498,7 @@ def global_sales_map_chart(df):
         locationmode="country names",
         color="Sales",
         hover_name="Country",
-        color_continuous_scale="Blues",
+        color_continuous_scale=["#DBEAFE", "#60A5FA", "#1D4ED8"],
         projection="natural earth"
     )
 
@@ -515,7 +548,8 @@ def top_subcategories_chart(df):
         top_subcategories,
         x="Sales",
         y="Sub-Category",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout
@@ -559,7 +593,8 @@ def top_profitable_subcategories_chart(df):
         top_profit_subcategories,
         x="Profit",
         y="Sub-Category",
-        text_auto=".2s"
+        text_auto=".2s",
+        color_discrete_sequence=BRAND_COLORWAY
     )
 
     # Apply Layout

@@ -1,4 +1,5 @@
 # Global Superstore Business Intelligence Dashboard
+[![Live Demo](https://img.shields.io/badge/Live-Dashboard-success?style=for-the-badge&logo=streamlit)](https://global-superstore-bi-dashboard.streamlit.app/)
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green)
@@ -16,6 +17,7 @@
 # Table of Contents
 
 - Project Results
+- Live Dashboard
 - Dashboard Preview
 - Project Overview
 - Project Objectives
@@ -57,6 +59,19 @@
 | Interactive Business Charts | 12 |
 | Global Sales Map | Completed |
 | Downloadable Filtered Dataset | Available |
+| Live Dashboard | Deployed on Streamlit Community Cloud |
+
+---
+
+# Live Dashboard
+
+🚀 **Live Demo**
+
+**Streamlit Community Cloud**
+
+https://global-superstore-bi-dashboard.streamlit.app/
+
+Explore the fully interactive Business Intelligence dashboard directly in your browser without installing any software.
 
 ---
 
@@ -75,6 +90,7 @@ The dashboard enables users to monitor business performance through interactive 
 </p>
 
 The dashboard home page provides a complete overview of business performance through executive KPI cards, interactive charts, and sidebar filters. Users can instantly monitor sales, profit, orders, customers, and overall business performance.
+The dashboard has also been deployed on **Streamlit Community Cloud**, allowing users to explore the interactive Business Intelligence application directly from their web browser.
 
 ---
 
@@ -623,6 +639,14 @@ streamlit run app/app.py
 ## 5. Open the Dashboard
 
 After running the above command, Streamlit will automatically open the dashboard in your default web browser.
+
+---
+
+## Live Demo
+
+If you only want to explore the dashboard, simply open the deployed application in your web browser.
+
+https://global-superstore-bi-dashboard.streamlit.app/
 
 ---
 

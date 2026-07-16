@@ -7,8 +7,8 @@ def page_config():
     """
 
     st.set_page_config(
-        page_title="Global Superstore Dashboard",
-        page_icon="📊",
+        page_title="Global Superstore | Analytics Dashboard",
+        page_icon="📈",
         layout="wide",
         initial_sidebar_state="expanded"
     )

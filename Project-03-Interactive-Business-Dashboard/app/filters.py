@@ -8,7 +8,8 @@ def sidebar_filters(df):
 
 
     # Sidebar Title
-    st.sidebar.header("Dashboard Filters")
+    st.sidebar.markdown("## Dashboard Filters")
+    st.sidebar.caption("Use these controls to refine the story and focus on the segment you want to present.")
 
 
     # Reset All Filters
@@ -38,7 +39,8 @@ def sidebar_filters(df):
     year = st.sidebar.multiselect(
         "Select Year",
         options=sorted(df["Order Year"].unique()),
-        key="year_filter"
+        key="year_filter",
+        placeholder="All years"
     )
 
     if year:
@@ -51,7 +53,8 @@ def sidebar_filters(df):
     market = st.sidebar.multiselect(
         "Select Market",
         options=sorted(filtered_df["Market"].unique()),
-        key="market_filter"
+        key="market_filter",
+        placeholder="All markets"
     )
 
     if market:
@@ -65,7 +68,8 @@ def sidebar_filters(df):
     region = st.sidebar.multiselect(
         "Select Region",
         options=sorted(filtered_df["Region"].unique()),
-        key="region_filter"
+        key="region_filter",
+        placeholder="All regions"
     )
 
     if region:
@@ -78,7 +82,8 @@ def sidebar_filters(df):
     category = st.sidebar.multiselect(
         "Select Category",
         options=sorted(filtered_df["Category"].unique()),
-        key="category_filter"
+        key="category_filter",
+        placeholder="All categories"
     )
 
     if category:
@@ -92,7 +97,8 @@ def sidebar_filters(df):
     sub_category = st.sidebar.multiselect(
         "Select Sub-Category",
         options=sorted(filtered_df["Sub-Category"].unique()),
-        key="subcategory_filter"
+        key="subcategory_filter",
+        placeholder="All sub-categories"
     )
 
     if sub_category:
@@ -105,7 +111,8 @@ def sidebar_filters(df):
     segment = st.sidebar.multiselect(
         "Select Segment",
         options=sorted(filtered_df["Segment"].unique()),
-        key="segment_filter"
+        key="segment_filter",
+        placeholder="All segments"
     )
 
     if segment:
@@ -152,5 +159,7 @@ def sidebar_filters(df):
         "Records Found",
         len(filtered_df)
     )
+
+    st.sidebar.caption(f"Date range: {start_date:%d %b %Y} to {end_date:%d %b %Y}")
 
     return filtered_df

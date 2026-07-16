@@ -16,6 +16,8 @@
 ![PCA](https://img.shields.io/badge/PCA-Dimensionality%20Reduction-purple)
 ![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)
 
+[![Live Dashboard](https://img.shields.io/badge/_Live_Demo-Streamlit-success?style=for-the-badge&logo=streamlit)](https://global-superstore-bi-dashboard.streamlit.app/)
+
 ---
 
 # Repository Overview
@@ -25,6 +27,9 @@ This repository contains the projects completed during my **DevelopersHub Corpor
 The projects demonstrate practical applications of **data preprocessing, exploratory data analysis (EDA), machine learning, business intelligence, dashboard development, data visualization, dimensionality reduction, and Explainable Artificial Intelligence (XAI)** using real-world datasets.
 
 Each project is organized in its own directory with complete documentation, source code, datasets, visualizations, project-specific README files, and required dependencies.
+
+The **Global Superstore Business Intelligence Dashboard (Project-03)** is also deployed on **Streamlit Community Cloud**, allowing users to explore the dashboard directly through their web browser.
+
 
 ---
 
@@ -52,7 +57,7 @@ DevelopersHub-Corporation-Advanced-Internship/
 |---------|-------------|--------|
 | [Project-01](Project-01-Term-Deposit-Prediction) | Term Deposit Subscription Prediction Using Machine Learning | ✅ Completed |
 | [Project-02](Project-02-Customer-Segmentation) | Customer Segmentation Using Unsupervised Learning | ✅ Completed |
-| [Project-03](Project-03-Interactive-Business-Dashboard) | Global Superstore Business Intelligence Dashboard | ✅ Completed |
+| [Project-03](Project-03-Interactive-Business-Dashboard) | Global Superstore Business Intelligence Dashboard ([Live Demo](https://global-superstore-bi-dashboard.streamlit.app/)) | ✅ Completed |
 
 ---
 
@@ -179,7 +184,14 @@ Develop an interactive **Business Intelligence Dashboard** using **Streamlit** t
 Project-03-Interactive-Business-Dashboard/
 ```
 
+### Live Dashboard
+
+**Streamlit Community Cloud**
+
+https://global-superstore-bi-dashboard.streamlit.app/
+
 ---
+
 
 # Skills Demonstrated
 
@@ -337,6 +349,12 @@ streamlit run app/app.py
 After executing the above command, Streamlit will automatically launch the dashboard in your default web browser.
 
 If the dashboard does not open automatically, copy and paste the local URL displayed in the terminal (typically `http://localhost:8501`) into your web browser.
+
+### Live Demo
+
+If you only want to explore the dashboard without installing the project locally, visit:
+
+https://global-superstore-bi-dashboard.streamlit.app/
 
 ---
 

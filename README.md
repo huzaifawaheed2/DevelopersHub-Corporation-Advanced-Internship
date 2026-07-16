@@ -3,11 +3,13 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green)
-![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange)
 ![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Visualization-9cf)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-red)
 ![SHAP](https://img.shields.io/badge/SHAP-Explainable%20AI-purple)
+![Streamlit](https://img.shields.io/badge/Streamlit-Interactive%20Dashboard-ff4b4b)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Visualization-3f4f75)
+![Business Intelligence](https://img.shields.io/badge/Business-Intelligence-success)
 ![Data Science](https://img.shields.io/badge/Data%20Science-Analytics-green)
 ![Classification](https://img.shields.io/badge/Classification-Supervised%20Learning-blueviolet)
 ![K-Means](https://img.shields.io/badge/K--Means-Clustering-success)
@@ -20,9 +22,9 @@
 
 This repository contains the projects completed during my **DevelopersHub Corporation Data Science & Analytics Internship**.
 
-Each project demonstrates practical applications of **data preprocessing, exploratory data analysis (EDA), supervised learning, unsupervised learning, model evaluation, data visualization, dimensionality reduction, and Explainable Artificial Intelligence (XAI)** using real-world datasets.
+The projects demonstrate practical applications of **data preprocessing, exploratory data analysis (EDA), machine learning, business intelligence, dashboard development, data visualization, dimensionality reduction, and Explainable Artificial Intelligence (XAI)** using real-world datasets.
 
-Every project is organized in its own folder with complete documentation, source code, visualizations, project-specific README files, and required dependencies.
+Each project is organized in its own directory with complete documentation, source code, datasets, visualizations, project-specific README files, and required dependencies.
 
 ---
 
@@ -35,6 +37,8 @@ DevelopersHub-Corporation-Advanced-Internship/
 │
 ├── Project-02-Customer-Segmentation/
 │
+├── Project-03-Interactive-Business-Dashboard/
+│
 ├── README.md
 └── .gitignore
 ```
@@ -45,8 +49,9 @@ DevelopersHub-Corporation-Advanced-Internship/
 
 | Project | Description | Status |
 |---------|-------------|--------|
-| Project-01 | Term Deposit Subscription Prediction Using Machine Learning | ✅ Completed |
-| Project-02 | Customer Segmentation Using Unsupervised Learning | ✅ Completed |
+| [Project-01](Project-01-Term-Deposit-Prediction) | Term Deposit Subscription Prediction Using Machine Learning | ✅ Completed |
+| [Project-02](Project-02-Customer-Segmentation) | Customer Segmentation Using Unsupervised Learning | ✅ Completed |
+| [Project-03](Project-03-Interactive-Business-Dashboard) | Global Superstore Business Intelligence Dashboard | ✅ Completed |
 
 ---
 
@@ -56,11 +61,11 @@ DevelopersHub-Corporation-Advanced-Internship/
 
 ### Objective
 
-Develop a machine learning classification model to predict whether a bank customer will subscribe to a term deposit based on demographic, financial, and marketing campaign information.
+Develop a supervised machine learning model to predict whether a bank customer will subscribe to a term deposit based on demographic, financial, and marketing campaign information.
 
 ### Project Highlights
 
-- Data Cleaning and Preprocessing
+- Data Cleaning & Preprocessing
 - Feature Engineering
 - Binary Encoding
 - One-Hot Encoding
@@ -96,7 +101,7 @@ Project-01-Term-Deposit-Prediction/
 
 ### Objective
 
-Segment mall customers into meaningful groups based on their purchasing behavior using the **K-Means Clustering** algorithm and recommend marketing strategies for each identified customer segment.
+Segment mall customers into meaningful groups based on purchasing behavior using the **K-Means Clustering** algorithm and recommend suitable marketing strategies for each customer segment.
 
 ### Project Highlights
 
@@ -107,8 +112,8 @@ Segment mall customers into meaningful groups based on their purchasing behavior
 - K-Means Clustering
 - Elbow Method
 - Principal Component Analysis (PCA)
-- Customer Segmentation
 - Cluster Analysis
+- Customer Segmentation
 - Marketing Strategy Development
 
 ### Technologies Used
@@ -129,53 +134,121 @@ Project-02-Customer-Segmentation/
 
 ---
 
+# Project-03
+
+## Global Superstore Business Intelligence Dashboard
+
+### Objective
+
+Develop an interactive **Business Intelligence Dashboard** using **Streamlit** to analyze the Global Superstore dataset and provide business insights through KPI cards, interactive filters, charts, and geographical visualizations.
+
+### Project Highlights
+
+- Data Cleaning & Preprocessing
+- Feature Engineering
+- Exploratory Data Analysis (EDA)
+- Interactive Streamlit Dashboard
+- Executive KPI Cards
+- Dynamic Sidebar Filters
+- Interactive Plotly Charts
+- Sales & Profit Analysis
+- Customer & Product Analysis
+- Regional & Market Analysis
+- Global Sales Map
+- Downloadable Filtered Dataset
+
+### Technologies Used
+
+#### Data Analysis
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+#### Dashboard Development
+
+- Streamlit
+- Plotly
+
+### Project Folder
+
+```text
+Project-03-Interactive-Business-Dashboard/
+```
+
+---
+
 # Skills Demonstrated
 
-Throughout this internship repository, the following technical skills have been applied:
+Throughout this internship repository, the following technical skills have been applied across different projects:
+
+### Data Analytics
 
 - Data Cleaning
 - Data Quality Assessment
 - Data Preprocessing
 - Exploratory Data Analysis (EDA)
-- Data Visualization
 - Feature Engineering
 - Feature Selection
 - Feature Scaling
+- Business Analytics
+- Business Intelligence
+- Data Visualization
+- Data Storytelling
+
+### Machine Learning
+
 - Supervised Machine Learning
 - Unsupervised Machine Learning
 - Binary Classification
+- Logistic Regression
+- Random Forest Classification
 - K-Means Clustering
 - Principal Component Analysis (PCA)
-- Logistic Regression
-- Random Forest
 - Model Evaluation
 - Confusion Matrix
 - ROC Curve Analysis
 - Explainable AI (SHAP)
-- Business Insight Generation
-- Marketing Strategy Development
+
+### Dashboard Development
+
+- Interactive Dashboard Development
+- KPI Design
+- Plotly Interactive Visualizations
+- Streamlit Application Development
+- Dashboard Filtering
+- Business Reporting
+
+### Professional Skills
+
 - Technical Documentation
 - Git & GitHub
+- Project Organization
+- Problem Solving
+- Data-Driven Decision Making
 
 ---
 
 # Repository Purpose
 
-The primary objective of this repository is to document and showcase the practical projects completed during the **DevelopersHub Corporation Data Science & Analytics Internship**.
+The primary objective of this repository is to showcase the practical projects completed during the **DevelopersHub Corporation Data Science & Analytics Internship**.
 
-Each project follows a complete data science workflow, including:
+The repository demonstrates an end-to-end data analytics workflow, beginning with raw datasets and progressing through data preprocessing, exploratory data analysis, machine learning, business intelligence, and interactive dashboard development.
 
-- Data Collection
+Each project focuses on solving a different real-world business problem while applying industry-standard tools and techniques.
+
+The projects collectively demonstrate practical experience in:
+
 - Data Cleaning
-- Data Quality Assessment
-- Exploratory Data Analysis (EDA)
 - Feature Engineering
-- Feature Selection
-- Feature Scaling
+- Exploratory Data Analysis (EDA)
 - Machine Learning
-- Model Evaluation
 - Customer Segmentation
-- Explainable AI (SHAP)
+- Explainable Artificial Intelligence (SHAP)
+- Business Intelligence
+- Dashboard Development
 - Business Insight Generation
 
 Additional internship projects will be added to this repository as they are completed.
@@ -192,7 +265,7 @@ git clone https://github.com/huzaifawaheed2/DevelopersHub-Corporation-Advanced-I
 
 ---
 
-## 2. Navigate to a Project Folder
+## 2. Navigate to the Desired Project
 
 ### Project-01
 
@@ -206,6 +279,12 @@ cd DevelopersHub-Corporation-Advanced-Internship/Project-01-Term-Deposit-Predict
 cd DevelopersHub-Corporation-Advanced-Internship/Project-02-Customer-Segmentation
 ```
 
+### Project-03
+
+```bash
+cd DevelopersHub-Corporation-Advanced-Internship/Project-03-Interactive-Business-Dashboard
+```
+
 ---
 
 ## 3. Install Required Libraries
@@ -216,27 +295,47 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Open Jupyter Notebook
+## 4. Run the Project
+
+### Project-01
 
 ```bash
 jupyter notebook
 ```
 
----
-
-## 5. Run the Notebook
-
-### Project-01
+Open:
 
 ```text
 notebooks/term_deposit_prediction.ipynb
 ```
 
+---
+
 ### Project-02
+
+```bash
+jupyter notebook
+```
+
+Open:
 
 ```text
 notebooks/Customer_Segmentation.ipynb
 ```
+
+---
+
+### Project-03
+
+Launch the Streamlit dashboard:
+
+```bash
+streamlit run app/app.py
+```
+
+After executing the above command, Streamlit will automatically launch the dashboard in your default web browser.
+
+If the dashboard does not open automatically, copy and paste the local URL displayed in the terminal (typically `http://localhost:8501`) into your web browser.
 
 ---
 
@@ -248,6 +347,8 @@ DevelopersHub-Corporation-Advanced-Internship/
 ├── Project-01-Term-Deposit-Prediction/
 │
 ├── Project-02-Customer-Segmentation/
+│
+├── Project-03-Interactive-Business-Dashboard/
 │
 ├── README.md
 └── .gitignore
@@ -272,7 +373,9 @@ Data Analyst | Power BI Developer | QA Engineer
 
 This repository contains projects completed as part of the **DevelopersHub Corporation Data Science & Analytics Internship Program**.
 
-The projects use publicly available datasets from trusted sources, including the **UCI Machine Learning Repository** and **Kaggle**, for educational and research purposes.
+The projects utilize publicly available datasets obtained from trusted sources, including the **UCI Machine Learning Repository** and **Kaggle**, for educational, research, and portfolio development purposes.
+
+Special thanks to the open-source community for developing powerful tools and libraries such as **Pandas**, **Matplotlib**, **Seaborn**, **Scikit-learn**, **Streamlit**, and **Plotly**, which made these projects possible.
 
 ---
 

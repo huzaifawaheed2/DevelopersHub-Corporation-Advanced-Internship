@@ -541,3 +541,44 @@ def top_subcategories_chart(df):
     
 
 
+def top_profitable_subcategories_chart(df):
+    """
+    Display Top 10 Most Profitable Sub-Categories.
+    """
+
+    # Prepare Data
+    top_profit_subcategories = (
+        df.groupby("Sub-Category", as_index=False)["Profit"]
+        .sum()
+        .sort_values("Profit", ascending=False)
+        .head(10)
+    )
+
+    # Create Figure
+    fig = px.bar(
+        top_profit_subcategories,
+        x="Profit",
+        y="Sub-Category",
+        text_auto=".2s"
+    )
+
+    # Apply Layout
+    apply_chart_layout(
+        fig,
+        title="Top 10 Most Profitable Sub-Categories",
+        x_title="Profit (USD)",
+        y_title="Sub-Category"
+    )
+
+    # Highest Profit at the Top
+    fig.update_yaxes(
+        autorange="reversed"
+    )
+
+    # Green color for profit
+    fig.update_traces(
+        hovertemplate="<b>%{y}</b><br>Profit: $%{x:,.2f}<extra></extra>"
+    )
+
+    # Display Chart
+    display_chart(fig)

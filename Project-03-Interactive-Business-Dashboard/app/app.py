@@ -199,32 +199,6 @@ top_subcategories_chart(filtered_df)
 
 
 
-# Dataset Preview
-# View and download the filtered dataset.
-
-render_section("Filtered Dataset", "Download or inspect the records currently matching your filters.")
-
-with st.expander("View Filtered Dataset"):
-
-    # Download Filtered Data
-    csv = filtered_df.to_csv(index=False).encode("utf-8")
-
-    st.download_button(
-        label="Download Filtered Data",
-        data=csv,
-        file_name="filtered_superstore_data.csv",
-        mime="text/csv",
-        use_container_width=True
-    )
-
-    st.dataframe(
-        filtered_df,
-        use_container_width=True,
-        hide_index=True
-    )
-
-
-
 # About Dashboard
 with st.container(border=True):
     st.markdown("<div class='about-kicker'>About this dashboard</div>", unsafe_allow_html=True)
@@ -338,3 +312,28 @@ with st.container(border=True):
                 - Logistics, market mix, and country-level sales
                 """
             )
+            
+
+# Dataset Preview
+# View and download the filtered dataset.
+
+render_section("Filtered Dataset", "Download or inspect the records currently matching your filters.")
+
+with st.expander("View Filtered Dataset"):
+
+    # Download Filtered Data
+    csv = filtered_df.to_csv(index=False).encode("utf-8")
+
+    st.download_button(
+        label="Download Filtered Data",
+        data=csv,
+        file_name="filtered_superstore_data.csv",
+        mime="text/csv",
+        use_container_width=True
+    )
+
+    st.dataframe(
+        filtered_df,
+        use_container_width=True,
+        hide_index=True
+    )

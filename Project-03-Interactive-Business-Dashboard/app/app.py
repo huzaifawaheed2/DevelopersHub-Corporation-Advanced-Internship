@@ -18,12 +18,13 @@ from charts import (
     sales_by_ship_mode_chart,
     sales_by_market_chart,
     global_sales_map_chart,
-    top_subcategories_chart
+    top_subcategories_chart,
+    top_profitable_subcategories_chart
 )
-from summary import business_summary
 
 # Page Configuration
 page_config()
+
 
 # Load Dataset
 df = load_data()
@@ -103,7 +104,7 @@ monthly_sales_trend_chart(filtered_df)
 
 st.divider()
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([1.2,1])
 
 with col1:
     top_products_chart(filtered_df)
@@ -114,17 +115,17 @@ with col2:
 
 
 # Sales & Profit Relationship Analysis
-# Analyze the relationship between sales, profit and business summary.
+# Analyze the relationship between sales, profit, and top-performing sub-categories.
 
 st.divider()
 
-col1, col2 = st.columns([2, 1])
+col1, col2 = st.columns(2)
 
 with col1:
     profit_vs_sales_chart(filtered_df)
 
 with col2:
-    business_summary(filtered_df)
+    top_profitable_subcategories_chart(filtered_df)
     
 
 
@@ -152,13 +153,13 @@ global_sales_map_chart(filtered_df)
 
 
 
+
 # Product Performance Analysis
-# Display top-performing product sub-categories by sales.
+# Display top-selling product sub-categories.
 
 st.divider()
 
 top_subcategories_chart(filtered_df)
-
 
 
 

@@ -40,6 +40,7 @@ DevelopersHub-Corporation-Advanced-Internship/
 ├── Project-03-Interactive-Business-Dashboard/
 │
 ├── README.md
+├── requirements.txt
 └── .gitignore
 ```
 
@@ -351,6 +352,7 @@ DevelopersHub-Corporation-Advanced-Internship/
 ├── Project-03-Interactive-Business-Dashboard/
 │
 ├── README.md
+├── requirements.txt
 └── .gitignore
 ```
 
